@@ -1,0 +1,55 @@
+{
+  "bot": {
+    "name": "Server Creator Pro",
+    "version": "2.0.0",
+    "description": "Bot avancado para criacao automatica de servidores Discord",
+    "prefix": "/",
+    "default_language": "pt-BR"
+  },
+  "limits": {
+    "max_channels_per_guild": 500,
+    "max_roles_per_guild": 250,
+    "max_categories_per_guild": 50,
+    "creation_cooldown": 30,
+    "max_servers_per_hour": 5,
+    "max_backups_per_server": 10
+  },
+  "themes": {
+    "count": 30,
+    "custom_enabled": true,
+    "ai_generation": true
+  },
+  "features": {
+    "auto_backup": true,
+    "auto_logs": true,
+    "anti_error": true,
+    "cooldown_system": true,
+    "template_system": true,
+    "save_system": true
+  },
+  "colors": {
+    "primary": 5793266,
+    "success": 5763719,
+    "warning": 16687068,
+    "error": 15548997,
+    "info": 15418782
+  },
+  "emojis": {
+    "success": "✅",
+    "error": "❌",
+    "warning": "⚠️",
+    "loading": "⏳",
+    "info": "ℹ️",
+    "star": "⭐",
+    "rocket": "🚀",
+    "gear": "⚙️",
+    "shield": "🛡️",
+    "crown": "👑",
+    "fire": "🔥",
+    "sparkles": "✨",
+    "magic": "🪄",
+    "palette": "🎨",
+    "brain": "🧠",
+    "bulb": "💡"
+  }
+}
