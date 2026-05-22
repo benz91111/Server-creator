@@ -34,12 +34,15 @@ COLORS = {
 # Emojis
 EMOJIS = CONFIG["emojis"]
 
-# Criar pastas necessárias
-for folder in ["logs", "databases", "assets/emojis", "templates", "backups"]:
+# Muda de "logs" para "bot_logs"
+for folder in ["bot_logs", "databases", "assets/emojis", "templates", "backups"]:
+    if os.path.exists(folder) and not os.path.isdir(folder):
+        os.remove(folder)
     os.makedirs(folder, exist_ok=True)
 
+
 # Configuracao de logging
-log_file = os.path.join("logs", "bot.log")
+log_file = os.path.join("bot_logs", "bot.log")
 logging.basicConfig(
     level=getattr(logging, os.getenv("LOG_LEVEL", "INFO")),
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
