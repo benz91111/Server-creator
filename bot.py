@@ -67,7 +67,7 @@ class ServerCreatorBot(commands.Bot):
             intents=intents,
             help_command=None
         )
-        self.db_path = "databases/server_creator.db"
+        self.db_path = "bot_databases/server_creator.db"
         self.templates_cache = {}
         self.session = None
 
