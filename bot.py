@@ -3711,8 +3711,8 @@ class ThemeSelectView(discord.ui.View):
             discord.SelectOption(label="Terror", value="terror", emoji="💀", description="Horror"),
             discord.SelectOption(label="Space", value="space", emoji="🚀", description="Espacial"),
             discord.SelectOption(label="Medieval", value="medieval", emoji="🏰", description="Era medieval"),
-                  ) 
-                 ] 
+        ] 
+        ) 
         async def theme_select(self, interaction: discord.Interaction, select: discord.ui.Select):
             self.selected_theme = select.values[0]
         theme_data = THEMES.get(self.selected_theme)
