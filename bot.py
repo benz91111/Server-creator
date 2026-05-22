@@ -3980,6 +3980,8 @@ class IdeasView(discord.ui.View):
 @app_commands.checks.cooldown(1, 30.0, key=lambda i: i.guild_id)
 async def create_command(interaction: discord.Interaction):
     """Comando principal para criar servidor"""
+    await interaction.response.defer(ephemeral=True)
+    
     embed = discord.Embed(
         title=f"{EMOJIS['rocket']} Server Creator Pro",
         description="Bem-vindo ao criador de servidores! Escolha um tema abaixo para comecar.",
@@ -3998,11 +4000,13 @@ async def create_command(interaction: discord.Interaction):
     embed.set_footer(text="Use os botoes abaixo para personalizar")
 
     view = ThemeSelectView()
-    await interaction.response.send_message(embed=embed, view=view, ephemeral=True)
+    await interaction.followup.send(embed=embed, view=view, ephemeral=True)
 
 @bot.tree.command(name="ideas", description="Obtenha ideias criativas para servidores")
 async def ideas_command(interaction: discord.Interaction):
     """Comando para sugestoes de ideias"""
+    await interaction.response.defer(ephemeral=True)
+    
     embed = discord.Embed(
         title=f"{EMOJIS['bulb']} Ideias de Servidores",
         description="Selecione uma ideia abaixo para ver mais detalhes!",
@@ -4010,7 +4014,7 @@ async def ideas_command(interaction: discord.Interaction):
     )
 
     view = IdeasView()
-    await interaction.response.send_message(embed=embed, view=view, ephemeral=True)
+    await interaction.followup.send(embed=embed, view=view, ephemeral=True)
 
 @bot.tree.command(name="backup", description="Crie um backup do servidor atual")
 @app_commands.checks.has_permissions(administrator=True)
