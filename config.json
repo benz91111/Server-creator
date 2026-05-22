@@ -8,7 +8,7 @@
   },
   "limits": {
     "max_channels_per_guild": 500,
-    "max_roles_per_guild": 2500,
+    "max_roles_per_guild": 250,
     "max_categories_per_guild": 50,
     "creation_cooldown": 30,
     "max_servers_per_hour": 5,
