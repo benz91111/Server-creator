@@ -35,7 +35,7 @@ COLORS = {
 EMOJIS = CONFIG["emojis"]
 
 # Muda de "logs" para "bot_logs"
-for folder in ["bot_logs", "databases", "assets/emojis", "templates", "backups"]:
+for folder in ["bot_logs", "bot_databases", "bot_assets", "bot_templates", "bot_backups"]:
     if os.path.exists(folder) and not os.path.isdir(folder):
         os.remove(folder)
     os.makedirs(folder, exist_ok=True)
